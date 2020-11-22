@@ -1,4 +1,4 @@
-# GThumb Android Library
+# UPDATED => GThumb Android Library
  <img src="https://raw.githubusercontent.com/InformationWorks/GThumbnailProject/master/readme_res/cover.png" width=400>
  
  
