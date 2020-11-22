@@ -23,8 +23,8 @@ Do you want to enrich the look of user list or you wish profile screen looks tha
   
   ````groovy
   dependencies {
-    compile 'com.hbb20:gthumb:1.3'
-  }
+	        implementation 'com.github.JobGetabu:GThumbnailProject:v2.0.0'
+	}
   ````
   
 #### Integrate in XML layout
