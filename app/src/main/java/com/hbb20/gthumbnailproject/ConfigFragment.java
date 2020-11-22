@@ -3,8 +3,8 @@ package com.hbb20.gthumbnailproject;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +21,7 @@ import com.hbb20.GThumb;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
@@ -36,46 +36,46 @@ public class ConfigFragment extends Fragment {
     GThumb.BACKGROUND_SHAPE selectedShape = GThumb.BACKGROUND_SHAPE.ROUND;
     boolean needToSetClickListener = true;
     boolean useBold = false;
-    @Bind(R.id.demo1)
+    @BindView(R.id.demo1)
     GThumb gThumb1;
-    @Bind(R.id.demo2)
+    @BindView(R.id.demo2)
     GThumb gThumb2;
-    @Bind(R.id.demo3)
+    @BindView(R.id.demo3)
     GThumb gThumb3;
-    @Bind(R.id.demo4)
+    @BindView(R.id.demo4)
     GThumb gThumb4;
-    @Bind(R.id.checkbox_useBold)
+    @BindView(R.id.checkbox_useBold)
     CheckBox checkBoxUseBold;
 
-    @Bind(R.id.radioGroupShape)
+    @BindView(R.id.radioGroupShape)
     RadioGroup radioGroupShape;
-    @Bind(R.id.radio_round)
+    @BindView(R.id.radio_round)
     RadioButton radioRound;
-    @Bind(R.id.radio_square)
+    @BindView(R.id.radio_square)
     RadioButton radioSquare;
 
-    @Bind(R.id.radioGroupClick)
+    @BindView(R.id.radioGroupClick)
     RadioGroup radioGroupClick;
-    @Bind(R.id.radio_click_set)
+    @BindView(R.id.radio_click_set)
     RadioButton radioClickSet;
-    @Bind(R.id.radio_click_avoid)
+    @BindView(R.id.radio_click_avoid)
     RadioButton radioClickAvoid;
 
-    @Bind(R.id.radioGroupColor)
+    @BindView(R.id.radioGroupColor)
     RadioGroup radioGroupColor;
 
-    @Bind(R.id.viewSampleColor)
+    @BindView(R.id.viewSampleColor)
     View viewSampleColor;
-    @Bind(R.id.seekbar_red)
+    @BindView(R.id.seekbar_red)
     SeekBar seekBarRed;
-    @Bind(R.id.seekbar_green)
+    @BindView(R.id.seekbar_green)
     SeekBar seekBarGreen;
-    @Bind(R.id.seekbar_blue)
+    @BindView(R.id.seekbar_blue)
     SeekBar seekBarBlue;
-    @Bind(R.id.overlay)
+    @BindView(R.id.overlay)
     View overlay;
 
-    @Bind(R.id.buttonList)
+    @BindView(R.id.buttonList)
     Button buttonList;
     int customMonoColor;
     boolean useMonoColor;

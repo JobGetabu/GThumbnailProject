@@ -1,21 +1,24 @@
 package com.hbb20.gthumbnailproject;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.app.AppCompatActivity;
 
-import butterknife.Bind;
+import com.google.android.material.tabs.TabLayout;
+
+import butterknife.BindView;
+import butterknife.BindViews;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Bind(R.id.viewPager)
+    @BindView(R.id.viewPager)
     ViewPager viewPager;
-    @Bind(R.id.tabLayout)
-    android.support.design.widget.TabLayout tabLayout;
+    @BindView(R.id.tabLayout)
+    TabLayout tabLayout;
     GListFragment gListFragment;
     ConfigFragment configFragment;
     PagerAdapter pagerAdapter;
@@ -30,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupPager() {
         if (pagerAdapter == null) {
-            pagerAdapter = new PagerAdapter(getSupportFragmentManager(), this);
         }
+            pagerAdapter = new PagerAdapter(getSupportFragmentManager(), this);
         viewPager.setAdapter(pagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
     }

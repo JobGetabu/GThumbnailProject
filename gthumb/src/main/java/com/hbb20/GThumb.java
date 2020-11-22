@@ -212,15 +212,15 @@ public class GThumb extends RelativeLayout {
                 }
 
                 @Override
-                public void onError() {
+                public void onError(Exception e) {
                     relativeForeground.setVisibility(INVISIBLE);
                     relativeBackgroundHolder.setVisibility(VISIBLE);
                 }
             };
             if (bgShape.equals(SHAPE_SQUARE)) {
-                Picasso.with(context).load(imageURL).into(imageViewRealImage,callback);
+                Picasso.get().load(imageURL).into(imageViewRealImage,callback);
             } else {
-                Picasso.with(context).load(imageURL).transform(new CircleTransform()).into(imageViewRealImage,callback);
+                Picasso.get().load(imageURL).transform(new CircleTransform()).into(imageViewRealImage,callback);
             }
         } else { //if URL is not valid
             relativeForeground.setVisibility(GONE);

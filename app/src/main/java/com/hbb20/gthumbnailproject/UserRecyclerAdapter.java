@@ -1,7 +1,9 @@
 package com.hbb20.gthumbnailproject;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +14,7 @@ import com.hbb20.GThumb;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -39,7 +41,7 @@ public class UserRecyclerAdapter extends RecyclerView.Adapter<UserRecyclerAdapte
     }
 
     @Override
-    public void onBindViewHolder(ContactViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ContactViewHolder holder, int position) {
         holder.bindUser(captainPlayerList.get(position));
     }
 
@@ -86,11 +88,11 @@ public class UserRecyclerAdapter extends RecyclerView.Adapter<UserRecyclerAdapte
 
     public class ContactViewHolder extends RecyclerView.ViewHolder {
 
-        @Bind(R.id.textView_name)
+        @BindView(R.id.textView_name)
         TextView textViewName;
-        @Bind(R.id.gThumb)
+        @BindView(R.id.gThumb)
         GThumb gThumb;
-        @Bind(R.id.textView_country)
+        @BindView(R.id.textView_country)
         TextView textViewCountry;
 
         public ContactViewHolder(View itemView) {
